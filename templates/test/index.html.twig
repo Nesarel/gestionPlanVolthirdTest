@@ -3,18 +3,33 @@
 {% block title %}Hello TestController!{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+{# <pre>
+    {{ dump(liste) }}
+</pre> #}
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'G:/WebForce3/symfony/gestionPlanVolthirdTest/src/Controller/TestController.php'|file_link(0) }}">src/Controller/TestController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'G:/WebForce3/symfony/gestionPlanVolthirdTest/templates/test/index.html.twig'|file_link(0) }}">templates/test/index.html.twig</a></code></li>
-    </ul>
-</div>
+    <table>
+
+        <thead>
+            <tr>
+                <th>Couleur</th>
+                <th>Code</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for ligne in liste %}
+                <tr>
+                    <td>{{ligne.nom}}</td>
+                    <td>{{ligne.code}}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+
+    </table>
+
+    <hr>
+
+    <img src="{{ asset('img/image1.png') }}" alt="">
+
 {% endblock %}
+{% block footer %} Autre Pied de page{% endblock %}

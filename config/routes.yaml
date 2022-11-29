@@ -1,3 +1,23 @@
 controllers:
     resource: ../src/Controller/
     type: attribute
+
+# home:
+#     path: /
+#     controller: App\Controller\HomeController::accueil
+
+# produit: 
+#     path: /produit/{id<\d+>?0}
+#     controller: App\Controller\ProduitController::affiche
+#     # default:
+#     #     id: 0
+#     # requirements:
+#     #     id: '\d+'
+#     methods: ['POST']
+#     schemes: ['http']
+
+# produit-by-slug: 
+#     path: /produit/{slug}
+#     controller: App\Controller\ProduitController::afficheBySlug
+#     # requirements:
+#     #     slug: '[a-z]*'

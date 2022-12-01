@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Company;
 use App\Repository\VilleRepository;
 use App\Repository\CompanyRepository;
 use Symfony\Component\HttpFoundation\Request;
@@ -22,10 +23,11 @@ class CompaniesController extends AbstractController
     }
 
     #[Route('/companies/{id}', name: "show_company")]
-    public function show(Request $request, CompanyRepository $repo): Response
+    public function show(Request $request, CompanyRepository $repo, int $id, Company $company): Response
     {
-        $id = $request->attributes->get('id');
-        $company = $repo->find($id);
+        // $id = $request->attributes->get('id');
+        // $company = $repo->find($id);composer require form validator
+
 
         return $this->render('companies/show.html.twig', [
             'company' => $company,
